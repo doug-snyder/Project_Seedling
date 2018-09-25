@@ -1,14 +1,19 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
 {
+	[HideInInspector]
+	private bool loadTitle = true;
+	[HideInInspector]
+	private bool loadFirstScene = false;
+
 	public static GameManager instance = null;
 
 
-	private void Awake()
+	private void Start()
 	{
 		if (instance == null)
 		{
@@ -20,30 +25,43 @@ public class GameManager : MonoBehaviour
 		}
 
 		DontDestroyOnLoad(gameObject);
-	}
-
-	private void InitGame()
-	{
-
+		InitGame();
 	}
 
 	private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
 	{
 
 	}
-
 	private void OnEnable()
 	{
-		
+		SceneManager.sceneLoaded += OnLevelFinishedLoading;
 	}
 	private void OnDisable()
 	{
-		
+		SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+	}
+
+	private void InitGame()
+	{
+		if (loadTitle)
+		{
+			GameObject.Find("TitleText").SetActive(true);
+			Button startGameButton = FindObjectOfType<Button>();
+			startGameButton.enabled = true;
+			startGameButton.onClick.AddListener(StartClick);
+			loadTitle = false;
+		}
 	}
 
 	private void Update()
 	{
-		
+
+	}
+
+	private void StartClick()
+	{
+		Debug.Log("START CLICK");
+		SceneManager.LoadScene("Intro", LoadSceneMode.Additive);
 	}
 
 }
