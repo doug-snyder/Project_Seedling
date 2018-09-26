@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-	[HideInInspector]
-	private bool loadTitle = true;
-	[HideInInspector]
-	private bool loadFirstScene = false;
+	public string screenToLoad = "Title";
+
+	public GameObject titleScreen;
 
 	public static GameManager instance = null;
 
@@ -25,7 +24,11 @@ public class GameManager : MonoBehaviour
 		}
 
 		DontDestroyOnLoad(gameObject);
-		InitGame();
+
+		if (screenToLoad.Equals("Title"))
+		{
+			LoadTitleScreen();
+		}
 	}
 
 	private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
@@ -41,16 +44,12 @@ public class GameManager : MonoBehaviour
 		SceneManager.sceneLoaded -= OnLevelFinishedLoading;
 	}
 
-	private void InitGame()
+	private void LoadTitleScreen()
 	{
-		if (loadTitle)
-		{
-			GameObject.Find("TitleText").SetActive(true);
-			Button startGameButton = FindObjectOfType<Button>();
-			startGameButton.enabled = true;
-			startGameButton.onClick.AddListener(StartClick);
-			loadTitle = false;
-		}
+		Instantiate(titleScreen, new Vector3(0, 0, 0), Quaternion.identity);
+		Button startGameButton = FindObjectOfType<Button>();
+		startGameButton.enabled = true;
+		startGameButton.onClick.AddListener(StartClick);
 	}
 
 	private void Update()
@@ -61,7 +60,6 @@ public class GameManager : MonoBehaviour
 	private void StartClick()
 	{
 		Debug.Log("START CLICK");
-		SceneManager.LoadScene("Intro", LoadSceneMode.Additive);
 	}
 
 }

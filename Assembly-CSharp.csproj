@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Loader.cs" />
+    <Compile Include="Assets\Scripts\ScreenManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>X:/WORKSPACE/Project_Seedling/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

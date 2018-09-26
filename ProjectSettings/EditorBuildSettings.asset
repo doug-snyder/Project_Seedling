@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ProjectSeedling.unity
+    guid: b796f897ed3b3ad499e98279584c4e4f
   m_configObjects: {}
