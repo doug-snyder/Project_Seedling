@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-	public string screenToLoad = "Title";
-
-	public GameObject titleScreen;
-
 	public static GameManager instance = null;
+	public string screenToLoad = "Title";
+	public GameObject titleScreen;
+	public GameObject introScreen;
 
 
 	private void Start()
@@ -17,6 +16,7 @@ public class GameManager : MonoBehaviour
 		if (instance == null)
 		{
 			instance = this;
+			PreloadScreens();
 		}
 		else if (instance != this)
 		{
@@ -24,16 +24,14 @@ public class GameManager : MonoBehaviour
 		}
 
 		DontDestroyOnLoad(gameObject);
-
-		if (screenToLoad.Equals("Title"))
-		{
-			LoadTitleScreen();
-		}
 	}
 
 	private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
 	{
-
+		if (screenToLoad.Equals("Title"))
+		{
+			LoadTitleScreen();
+		}
 	}
 	private void OnEnable()
 	{
@@ -44,22 +42,34 @@ public class GameManager : MonoBehaviour
 		SceneManager.sceneLoaded -= OnLevelFinishedLoading;
 	}
 
-	private void LoadTitleScreen()
-	{
-		Instantiate(titleScreen, new Vector3(0, 0, 0), Quaternion.identity);
-		Button startGameButton = FindObjectOfType<Button>();
-		startGameButton.enabled = true;
-		startGameButton.onClick.AddListener(StartClick);
-	}
-
 	private void Update()
 	{
 
 	}
 
+	private void PreloadScreens()
+	{
+		titleScreen = Instantiate(titleScreen, new Vector3(0, 0, 0), Quaternion.identity);
+		introScreen = Instantiate(introScreen, new Vector3(0, 0, 0), Quaternion.identity);
+	}
+
+	private void LoadTitleScreen()
+	{
+		//if (titleScreen.)
+		titleScreen.SetActive(true);
+		titleScreen.GetComponentInChildren<Canvas>().GetComponentInChildren<Button>().onClick.AddListener(StartClick);
+	}
+
+	private void LoadIntroScreen()
+	{
+		introScreen.SetActive(true);
+	}
+
 	private void StartClick()
 	{
 		Debug.Log("START CLICK");
+		titleScreen.SetActive(false);
+		LoadIntroScreen();
 	}
 
 }
