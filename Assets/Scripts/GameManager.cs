@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
 	public GameObject demographicsScreen;
 	*/
 
-
 	private void Start()
 	{
 		if (instance == null)
@@ -96,14 +95,13 @@ public class GameManager : MonoBehaviour
 	{
 		menuScreen.SetActive(true);
 		Button[] buttons = menuScreen.GetComponentInChildren<Canvas>().GetComponentsInChildren<Button>();
-		buttons[0].onClick.AddListener(OverviewClick);
 
-		/*
 		foreach (Button button in buttons)
 		{
-			button.onClick.AddListener(Type.GetType("Button").GetMethod(button.name + "Click"));
+			button.onClick.AddListener(OverviewClick);
 		}
-		*/
+
+		//buttons[0].onClick.AddListener(OverviewClick);
 	}
 	private void LoadOverviewScreen()
 	{
