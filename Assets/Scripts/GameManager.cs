@@ -12,16 +12,16 @@ public class GameManager : MonoBehaviour
 	public GameObject introScreen;
 	public GameObject menuScreen;
 	public GameObject overviewScreen;
-	/*
-	public GameObject financialsScreen;
-	public GameObject militaryScreen;
-	public GameObject developmentScreen;
-	public GameObject educationScreen;
-	public GameObject entertainmentScreen;
-	public GameObject affairsScreen;
-	public GameObject demographicsScreen;
-	*/
-
+	
+	///public GameObject financialsScreen;
+	///public GameObject militaryScreen;
+	///public GameObject developmentScreen;
+	///public GameObject educationScreen;
+	///public GameObject entertainmentScreen;
+	///public GameObject affairsScreen;
+	///public GameObject demographicsScreen;
+	
+    
 	private void Start()
 	{
 		if (instance == null)
@@ -32,8 +32,7 @@ public class GameManager : MonoBehaviour
 		else if (instance != this)
 		{
 			Destroy(gameObject);
-		}
-
+	    }
 		DontDestroyOnLoad(gameObject);
 		LoadTitleScreen();
 	}
@@ -42,7 +41,6 @@ public class GameManager : MonoBehaviour
 	{
 
 	}
-
 
 	private void PreloadScreens()
 	{

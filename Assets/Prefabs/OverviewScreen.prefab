@@ -196,7 +196,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "MILITARY BREAKDOWN\n\nTroops: none\t\t\t\tSandwiches: 9\n\nTanks: none\t\t\t\tSpaceships:
+  m_Text: "MILITARY BREAKDOWN\n\nTroops: none\t\t\tSandwiches: 9\n\nTanks: none\t\t\tSpaceships:
     0"
 --- !u!114 &114261724953594268
 MonoBehaviour:
@@ -422,11 +422,11 @@ RectTransform:
   m_Father: {fileID: 224645574570664296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82, y: 60}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3, y: 22}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!224 &224485865529789434
 RectTransform:
   m_ObjectHideFlags: 1
@@ -501,8 +501,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -266.2}
-  m_SizeDelta: {x: -860, y: -622.4}
+  m_AnchoredPosition: {x: -3, y: -267}
+  m_SizeDelta: {x: -949.5, y: -651.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224898641259691396
 RectTransform:
