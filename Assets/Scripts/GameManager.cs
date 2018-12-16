@@ -55,44 +55,40 @@ public class GameManager : MonoBehaviour
 
 		overviewScreen = Instantiate(overviewScreen, new Vector3(0, 0, 0), Quaternion.identity);
 		overviewScreen.SetActive(false);
-		/*
-		financialsScreen = Instantiate(financialsScreen, new Vector3(0, 0, 0), Quaternion.identity);
-		financialsScreen.SetActive(false);
 
+		/* financialsScreen = Instantiate(financialsScreen, new Vector3(0, 0, 0), Quaternion.identity);
+		financialsScreen.SetActive(false);
 		militaryScreen = Instantiate(militaryScreen, new Vector3(0, 0, 0), Quaternion.identity);
 		militaryScreen.SetActive(false);
-
 		developmentScreen = Instantiate(developmentScreen, new Vector3(0, 0, 0), Quaternion.identity);
 		developmentScreen.SetActive(false);
-
 		educationScreen = Instantiate(educationScreen, new Vector3(0, 0, 0), Quaternion.identity);
 		educationScreen.SetActive(false);
-
-		entertainmentScreen = Instantiate(entertainmentScreen, new Vector3(0, 0, 0), Quaternion.identity);
+		entertainmentScreen = Instantiate(entertainmentScreen, new Vector3(0, 0, 0), Quaternion.identity);                   
 		entertainmentScreen.SetActive(false);
-
 		affairsScreen = Instantiate(affairsScreen, new Vector3(0, 0, 0), Quaternion.identity);
 		affairsScreen.SetActive(false);
-
 		demographicsScreen = Instantiate(demographicsScreen, new Vector3(0, 0, 0), Quaternion.identity);
-		demographicsScreen.SetActive(false);
-		*/
+		demographicsScreen.SetActive(false); */
 	}
 
 	private void LoadTitleScreen()
 	{
 		titleScreen.SetActive(true);
-		titleScreen.GetComponentInChildren<Canvas>().GetComponentInChildren<Button>().onClick.AddListener(StartClick);
+		titleScreen.GetComponentInChildren<Canvas>().GetComponentInChildren<Button>()
+				.onClick.AddListener(StartClick);
 	}
 	private void LoadIntroScreen()
 	{
 		introScreen.SetActive(true);
-		introScreen.GetComponentInChildren<Canvas>().GetComponentInChildren<Button>().onClick.AddListener(ContinueClick);
+		introScreen.GetComponentInChildren<Canvas>().GetComponentInChildren<Button>()
+				.onClick.AddListener(ContinueClick);
 	}
 	private void LoadMenuScreen()
 	{
 		menuScreen.SetActive(true);
-		Button[] buttons = menuScreen.GetComponentInChildren<Canvas>().GetComponentsInChildren<Button>();
+		Button[] buttons
+				= menuScreen.GetComponentInChildren<Canvas>().GetComponentsInChildren<Button>();
 
 		foreach (Button button in buttons)
 		{
