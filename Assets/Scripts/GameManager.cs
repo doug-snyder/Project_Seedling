@@ -13,13 +13,13 @@ public class GameManager : MonoBehaviour
 	public GameObject menuScreen;
 	public GameObject overviewScreen;
 	
-	///public GameObject financialsScreen;
-	///public GameObject militaryScreen;
-	///public GameObject developmentScreen;
-	///public GameObject educationScreen;
-	///public GameObject entertainmentScreen;
-	///public GameObject affairsScreen;
-	///public GameObject demographicsScreen;
+	//public GameObject financialsScreen;
+	//public GameObject militaryScreen;
+	//public GameObject developmentScreen;
+	//public GameObject educationScreen;
+	//public GameObject entertainmentScreen;
+	//public GameObject affairsScreen;
+	//public GameObject demographicsScreen;
 	
     
 	private void Start()
@@ -56,7 +56,8 @@ public class GameManager : MonoBehaviour
 		overviewScreen = Instantiate(overviewScreen, new Vector3(0, 0, 0), Quaternion.identity);
 		overviewScreen.SetActive(false);
 
-		/* financialsScreen = Instantiate(financialsScreen, new Vector3(0, 0, 0), Quaternion.identity);
+		/*
+		financialsScreen = Instantiate(financialsScreen, new Vector3(0, 0, 0), Quaternion.identity);
 		financialsScreen.SetActive(false);
 		militaryScreen = Instantiate(militaryScreen, new Vector3(0, 0, 0), Quaternion.identity);
 		militaryScreen.SetActive(false);
@@ -69,7 +70,8 @@ public class GameManager : MonoBehaviour
 		affairsScreen = Instantiate(affairsScreen, new Vector3(0, 0, 0), Quaternion.identity);
 		affairsScreen.SetActive(false);
 		demographicsScreen = Instantiate(demographicsScreen, new Vector3(0, 0, 0), Quaternion.identity);
-		demographicsScreen.SetActive(false); */
+		demographicsScreen.SetActive(false);
+		*/
 	}
 
 	private void LoadTitleScreen()
