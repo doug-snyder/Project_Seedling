@@ -232,8 +232,11 @@
     <Compile Include="Assets\MarkLight\Source\Plugins\ViewTypeData.cs" />
     <Compile Include="Assets\MarkLight\Source\Plugins\VirtualizedItems.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GameManagerScene.cs" />
     <Compile Include="Assets\Scripts\Loader.cs" />
     <Compile Include="Assets\Scripts\ScreenManager.cs" />
+    <Compile Include="Assets\Scripts\StartButtonScript.cs" />
+    <Compile Include="Assets\Scripts\TitleScreen.cs" />
     <None Include="Assets\MarkLight\Examples\Views\UI\DataBinding\DynamicComboBoxExample.xml" />
     <None Include="Assets\MarkLight\Views\UI\CheckBox.xml" />
     <None Include="Assets\MarkLight\Views\Themes\Toon.xml" />

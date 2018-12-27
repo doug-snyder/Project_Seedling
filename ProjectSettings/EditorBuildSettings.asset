@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ProjectSeedling.unity
-    guid: b796f897ed3b3ad499e98279584c4e4f
+    path: Assets/Scenes/GameManagerScene.unity
+    guid: e5431804414a4dc46835ff4682b66b12
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: b0d8a6e1cf575094ba6f6609b682d9a3
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: b5d3649ee12f7ce408788d8f876d3c9c
+  - enabled: 1
+    path: Assets/Scenes/Oview.unity
+    guid: 0f5eb5080fc67c24b9ee2c95fa20f4ad
   m_configObjects: {}
