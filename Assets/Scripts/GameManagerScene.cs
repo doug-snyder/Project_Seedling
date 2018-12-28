@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class GameManagerScene : MonoBehaviour
 {
 	public static GameManagerScene instance = null;
@@ -17,14 +16,16 @@ public class GameManagerScene : MonoBehaviour
 			Destroy(gameObject);
 		}
 		DontDestroyOnLoad(gameObject);
-		LoadTitle();
+
+		StartGame();
+	}
+
+	private void StartGame()
+	{
+		Debug.Log("StartGame");
+		SceneManager.LoadScene("Title");
 	}
 
 	private void Update(){}
-
-	private void LoadTitle()
-	{
-		SceneManager.LoadScene("Title");
-	}
 
 }
