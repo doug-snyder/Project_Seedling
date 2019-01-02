@@ -157,6 +157,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManagerScene: {fileID: 7608614708315446210, guid: 62e4613a686428f4bbb10a48d7ecb4b4,
     type: 3}
+  playerDataManager: {fileID: 7415707658438190705, guid: 9e2cd3bae7bcdfd46b9194c1962d7c57,
+    type: 3}
 --- !u!1 &816175680
 GameObject:
   m_ObjectHideFlags: 0

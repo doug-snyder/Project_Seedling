@@ -1,22 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DEV_NavButtons : MonoBehaviour
 {
-	public static DEV_NavButtons instance = null;
-
-	private void Start()
+	public void DEV_GoToTitlePage()
 	{
-		if (instance == null)
-		{
-			instance = this;
-		}
-		else if (instance != null)
-		{
-			Destroy(gameObject);
-		}
-		DontDestroyOnLoad(gameObject);
+		SceneManager.LoadScene("Title");
 	}
 
 }

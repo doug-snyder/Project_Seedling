@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManagerScene : MonoBehaviour
 {
 	public static GameManagerScene instance = null;
-	
+
 	private void Start()
 	{
 		if (instance == null)
@@ -25,7 +25,5 @@ public class GameManagerScene : MonoBehaviour
 		Debug.Log("StartGame");
 		SceneManager.LoadScene("Title");
 	}
-
-	private void Update(){}
 
 }
