@@ -232,11 +232,13 @@
     <Compile Include="Assets\MarkLight\Source\Plugins\ViewTypeData.cs" />
     <Compile Include="Assets\MarkLight\Source\Plugins\VirtualizedItems.cs" />
     <Compile Include="Assets\Scripts\DEV_NavButtons.cs" />
+    <Compile Include="Assets\Scripts\FinanceScene.cs" />
     <Compile Include="Assets\Scripts\GameManagerScene.cs" />
     <Compile Include="Assets\Scripts\LoaderScene.cs" />
     <Compile Include="Assets\Scripts\Old\GameManager.cs" />
     <Compile Include="Assets\Scripts\Old\Loader.cs" />
     <Compile Include="Assets\Scripts\PlayerDataManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerPrefFinder.cs" />
     <Compile Include="Assets\Scripts\ScreenManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <None Include="Assets\MarkLight\Examples\Views\UI\DataBinding\DynamicComboBoxExample.xml" />
