@@ -236,9 +236,6 @@
     <Compile Include="Assets\Scripts\GameManagerScene.cs" />
     <Compile Include="Assets\Scripts\InputFieldHandler.cs" />
     <Compile Include="Assets\Scripts\LoaderScene.cs" />
-    <Compile Include="Assets\Scripts\Old\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Old\Loader.cs" />
-    <Compile Include="Assets\Scripts\PlayerDataManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <None Include="Assets\MarkLight\Examples\Views\UI\DataBinding\DynamicComboBoxExample.xml" />
     <None Include="Assets\MarkLight\Views\UI\CheckBox.xml" />

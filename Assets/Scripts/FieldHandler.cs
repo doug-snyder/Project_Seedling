@@ -3,12 +3,19 @@ using UnityEngine.UI;
 
 public class FieldHandler : MonoBehaviour
 {
-	public string field;    
+	public string field;
+	private Text text;
 
-    void Start()
-    {
-		Text text = gameObject.GetComponent<Text>();
-		text.text = PlayerPrefs.GetFloat(field).ToString();
-    }
+	private void Start()
+	{
+		text = gameObject.GetComponent<Text>();
+
+		SetField();
+	}
+
+	public void SetField()
+	{
+		text.text = PlayerPrefs.GetString(field);
+	}
 
 }

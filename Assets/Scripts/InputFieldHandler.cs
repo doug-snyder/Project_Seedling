@@ -4,20 +4,23 @@ using UnityEngine.UI;
 public class InputFieldHandler : MonoBehaviour
 {
 	public string field;
-	InputField inputField;
+	private InputField inputField;
 
 	private void Start()
 	{
 		inputField = gameObject.GetComponent<InputField>();
 
-		inputField.text = PlayerPrefs.GetFloat(field).ToString();
+		SetField();
 	}
 
-	public void SaveFieldAsFloat()
+	public void SetField()
 	{
-		PlayerPrefs.SetFloat(field, float.Parse(inputField.text));
+		inputField.text = PlayerPrefs.GetString(field);
+	}
 
-		Debug.Log(PlayerPrefs.GetFloat(field));
+	public void SaveField()
+	{
+		PlayerPrefs.SetString(field, inputField.text);
 	}
 
 }
