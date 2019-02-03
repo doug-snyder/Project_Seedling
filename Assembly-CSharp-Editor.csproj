@@ -61,11 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MarkLight\Source\Plugins\Editor\Configuration.cs" />
-    <Compile Include="Assets\MarkLight\Source\Plugins\Editor\MenuItems.cs" />
-    <Compile Include="Assets\MarkLight\Source\Plugins\Editor\ViewInspector.cs" />
-    <Compile Include="Assets\MarkLight\Source\Plugins\Editor\ViewPostprocessor.cs" />
-    <Compile Include="Assets\MarkLight\Source\Plugins\Editor\ViewPresenterInspector.cs" />
+    <Compile Include="Assets\Editor\AgnosticUI_UnityMenu.cs" />
     <Reference Include="Unity.2D.PixelPerfect.Editor">
       <HintPath>Y:/Workspace/Project_Seedling/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
