@@ -67,7 +67,6 @@
     <Compile Include="Assets\Script\DEV_NavButtons.cs" />
     <Compile Include="Assets\Script\FieldHandler.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\Script\InputFieldHandler.cs" />
     <Compile Include="Assets\Script\Loader.cs" />
     <Reference Include="Unity.2D.PixelPerfect.Editor">
       <HintPath>Y:/Workspace/Project_Seedling/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
