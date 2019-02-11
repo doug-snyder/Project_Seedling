@@ -10,6 +10,7 @@ public class FieldHandler : MonoBehaviour
 	public string field;
 	private Text text;
 
+	#region Main
 	private void Start()
 	{
 		if (gameObject.GetComponent<InputField>())
@@ -23,7 +24,9 @@ public class FieldHandler : MonoBehaviour
 
 		GetField();
 	}
+	#endregion
 
+	#region Helpers
 	public void GetField()
 	{
 		text.text = PlayerPrefs.GetString(field);
@@ -33,5 +36,19 @@ public class FieldHandler : MonoBehaviour
 	{
 		PlayerPrefs.SetString(field, text.text);
 	}
+
+	public void CalculateIncome()
+	{
+		
+	}
+
+	public string CalculateRevenue()
+	{
+		float income = float.Parse(PlayerPrefs.GetString("Income"));
+		float expenses = float.Parse(PlayerPrefs.GetString("Expenses"));
+
+		return (income - expenses).ToString();
+	}
+	#endregion
 
 }
