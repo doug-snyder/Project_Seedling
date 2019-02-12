@@ -1385,7 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: GrossIncome
+  field: Revenue
 --- !u!114 &444305603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,7 +1419,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!222 &444305604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1985,7 +1985,7 @@ GameObject:
   - component: {fileID: 676682537}
   m_Layer: 0
   m_Name: Expenses
-  m_TagString: Untagged
+  m_TagString: UpdateField
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2959,7 +2959,7 @@ GameObject:
   - component: {fileID: 1022873349}
   m_Layer: 0
   m_Name: TaxRate
-  m_TagString: Untagged
+  m_TagString: UpdateField
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3299,7 +3299,7 @@ GameObject:
   - component: {fileID: 1155823974}
   m_Layer: 0
   m_Name: Revenue
-  m_TagString: Untagged
+  m_TagString: UpdateField
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3456,8 +3456,13 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.InputField+SubmitEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_OnValueChanged:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1176114873}
+      - m_Target: {fileID: 1724804880}
         m_MethodName: SavePlayerPref
         m_Mode: 1
         m_Arguments:
@@ -3468,11 +3473,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.InputField+SubmitEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -3526,7 +3526,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176114868}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
@@ -3976,7 +3976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: TaxRate
+  field: 
 --- !u!114 &1304883905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4177,7 +4177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: GrossIncome
+  field: Expenses
 --- !u!114 &1376933082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4211,7 +4211,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 567,890
+  m_Text: 
 --- !u!222 &1376933083
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4804,7 +4804,7 @@ GameObject:
   - component: {fileID: 1646279649}
   m_Layer: 0
   m_Name: Income
-  m_TagString: Untagged
+  m_TagString: UpdateField
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4976,6 +4976,7 @@ GameObject:
   - component: {fileID: 1724804877}
   - component: {fileID: 1724804879}
   - component: {fileID: 1724804878}
+  - component: {fileID: 1724804880}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -5044,6 +5045,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724804876}
   m_CullTransparentMesh: 0
+--- !u!114 &1724804880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724804876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  field: TaxRate
 --- !u!1 &1735353689
 GameObject:
   m_ObjectHideFlags: 0
@@ -5630,7 +5644,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1,000,000
+  m_Text: 
 --- !u!222 &2033477354
 CanvasRenderer:
   m_ObjectHideFlags: 0

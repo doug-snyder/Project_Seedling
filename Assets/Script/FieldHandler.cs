@@ -7,19 +7,20 @@ using UnityEngine.UI;
  */
 public class FieldHandler : MonoBehaviour
 {
-	public string field;
-	private Text text;
+	[SerializeField]
+	private string field;
+	private Text FieldText;
 
 	#region Main
 	private void Start()
 	{
 		if (gameObject.GetComponent<InputField>())
 		{
-			text = gameObject.GetComponent<InputField>().textComponent;
+			FieldText = gameObject.GetComponent<InputField>().textComponent;
 		}
 		else
 		{
-			text = GetComponent<Text>();
+			FieldText = GetComponent<Text>();
 		}
 
 		GetField();
@@ -27,22 +28,22 @@ public class FieldHandler : MonoBehaviour
 	#endregion
 
 	#region Helpers
-	public void GetField()
+	private void GetField()
 	{
-		text.text = PlayerPrefs.GetString(field);
+		FieldText.text = PlayerPrefs.GetString(field);
 	}
 
 	public void SavePlayerPref()
 	{
-		PlayerPrefs.SetString(field, text.text);
+		PlayerPrefs.SetString(field, FieldText.text);
 	}
 
-	public void CalculateIncome()
+	private void CalculateIncome()
 	{
-		
+		// TaxRate * (MedianIncome * Population)?
 	}
 
-	public string CalculateRevenue()
+	private string CalculateRevenue()
 	{
 		float income = float.Parse(PlayerPrefs.GetString("Income"));
 		float expenses = float.Parse(PlayerPrefs.GetString("Expenses"));
