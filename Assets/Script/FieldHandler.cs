@@ -30,17 +30,23 @@ public class FieldHandler : MonoBehaviour
 	#region Helpers
 	private void GetField()
 	{
-		FieldText.text = PlayerPrefs.GetString(field);
+		string temp;	
+
+		if (string.Equals(field, "Revenue"))
+		{
+			temp = CalculateRevenue();
+		}
+		else
+		{
+			temp = PlayerPrefs.GetString(field);
+		}
+
+		FieldText.text = temp;
 	}
 
 	public void SavePlayerPref()
 	{
 		PlayerPrefs.SetString(field, FieldText.text);
-	}
-
-	private void CalculateIncome()
-	{
-		// TaxRate * (MedianIncome * Population)?
 	}
 
 	private string CalculateRevenue()
