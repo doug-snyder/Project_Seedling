@@ -579,10 +579,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 169858545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0554aa6b01033e841ba1d20d0de5fecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: TaxRate
+  FieldName: TaxRate
 --- !u!114 &169858548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,10 +1062,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 284531987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0554aa6b01033e841ba1d20d0de5fecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: Income
+  FieldName: Income
 --- !u!114 &284531990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1725,7 +1725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: Revenue
 --- !u!114 &444305603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2709,10 +2708,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 854260534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0554aa6b01033e841ba1d20d0de5fecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: Expenses
+  FieldName: Expenses
 --- !u!114 &854260537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4043,7 +4042,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: TaxRate
 --- !u!1 &1205788063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4488,7 +4486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: 
 --- !u!114 &1304883905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4690,7 +4687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: Expenses
 --- !u!114 &1376933082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4743,6 +4739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425741604}
   - component: {fileID: 1425741607}
+  - component: {fileID: 1425741608}
   - component: {fileID: 1425741606}
   - component: {fileID: 1425741605}
   m_Layer: 0
@@ -4751,7 +4748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1425741604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4831,6 +4828,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1425741608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425741603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1490673174
 GameObject:
   m_ObjectHideFlags: 0
@@ -5206,7 +5215,6 @@ GameObject:
   - component: {fileID: 1607700030}
   - component: {fileID: 1607700029}
   - component: {fileID: 1607700028}
-  - component: {fileID: 1607700027}
   m_Layer: 0
   m_Name: InputField
   m_TagString: Untagged
@@ -5235,19 +5243,6 @@ RectTransform:
   m_AnchoredPosition: {x: 600, y: 0}
   m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0, y: 0.5}
---- !u!114 &1607700027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607700025}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  field: TaxRate
 --- !u!114 &1607700028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5303,8 +5298,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 169858547}
-        m_MethodName: SavePlayerPref
+      - m_Target: {fileID: 1425741608}
+        m_MethodName: TriggerUpdateables
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5914,7 +5909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: TaxRate
 --- !u!1 &1735353689
 GameObject:
   m_ObjectHideFlags: 0
@@ -6036,10 +6030,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1776286954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0554aa6b01033e841ba1d20d0de5fecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: Revenue
+  FieldName: Revenue
 --- !u!114 &1776286957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6774,7 +6768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  field: Income
 --- !u!1 &2057102458
 GameObject:
   m_ObjectHideFlags: 0

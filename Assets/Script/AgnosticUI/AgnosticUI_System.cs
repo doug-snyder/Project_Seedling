@@ -41,6 +41,10 @@ namespace ColdPants.AgnosticUI
 			}
 
 			TransitionIn();
+
+			PlayerPrefs.SetString("Income", "234");
+			PlayerPrefs.SetString("Expenses", "567896");
+			PlayerPrefs.SetString("Revenue", "54643");
 		}
 		#endregion
 
