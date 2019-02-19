@@ -4,6 +4,7 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager instance = null;
 
+	#region Main
 	private void Awake()
 	{
 		if (instance == null)
@@ -18,10 +19,13 @@ public class GameManager : MonoBehaviour
 
 		StartGame();
 	}
+	#endregion
 
+	#region Helpers
 	private void StartGame()
 	{
 		Debug.Log("StartGame");
 	}
+	#endregion
 
 }

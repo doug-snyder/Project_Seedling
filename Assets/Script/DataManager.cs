@@ -4,7 +4,8 @@ public class DataManager : MonoBehaviour
 {
 	public static DataManager instance = null;
 
-    void Awake()
+	#region Main
+	void Awake()
     {
         if (instance == null)
 		{
@@ -18,10 +19,13 @@ public class DataManager : MonoBehaviour
 
 		InitializeData();
     }
+	#endregion
 
+	#region Helpers
 	private void InitializeData()
 	{
 		Debug.Log("InitializeData");
 	}
+	#endregion
 
 }

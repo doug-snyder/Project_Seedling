@@ -40,8 +40,6 @@ namespace ColdPants.AgnosticUI
 				TransitionImage.gameObject.SetActive(true);
 			}
 
-			PlayerPrefs.SetString("TaxRate", "45");
-
 			TransitionIn();
 		}
 		#endregion
