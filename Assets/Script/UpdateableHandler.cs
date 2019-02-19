@@ -21,19 +21,11 @@ public class UpdateableHandler : MonoBehaviour
 	{
 		foreach (UpdateableText updateableText in updateableTexts)
 		{
-			updateableText.UpdateText();
+			updateableText.GetPlayerPref();
 		}
-	}
 
-	/*
-	private string CalculateRevenue()
-	{
-		float income = float.Parse(PlayerPrefs.GetString("Income"));
-		float expenses = float.Parse(PlayerPrefs.GetString("Expenses"));
-
-		return (income - expenses).ToString();
+		//PlayerPrefs.Save();
 	}
-	*/
 	#endregion
 
 }

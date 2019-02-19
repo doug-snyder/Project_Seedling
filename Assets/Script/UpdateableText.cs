@@ -13,12 +13,12 @@ public class UpdateableText : MonoBehaviour
 	void Start()
     {
 		fieldText = gameObject.GetComponent<Text>();
-		UpdateText();
+		GetPlayerPref();
     }
 	#endregion
 	
 	#region Helpers
-	public void UpdateText()
+	public void GetPlayerPref()
 	{
 		fieldText.text = PlayerPrefs.GetString(FieldName);
 	}

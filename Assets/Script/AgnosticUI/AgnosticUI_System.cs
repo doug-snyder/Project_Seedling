@@ -40,11 +40,9 @@ namespace ColdPants.AgnosticUI
 				TransitionImage.gameObject.SetActive(true);
 			}
 
-			TransitionIn();
+			PlayerPrefs.SetString("TaxRate", "45");
 
-			PlayerPrefs.SetString("Income", "234");
-			PlayerPrefs.SetString("Expenses", "567896");
-			PlayerPrefs.SetString("Revenue", "54643");
+			TransitionIn();
 		}
 		#endregion
 

@@ -64,6 +64,7 @@
     <Compile Include="Assets\Script\AgnosticUI\AgnosticUI_Screen.cs" />
     <Compile Include="Assets\Script\AgnosticUI\AgnosticUI_System.cs" />
     <Compile Include="Assets\Script\AgnosticUI\AgnosticUI_TimedScreen.cs" />
+    <Compile Include="Assets\Script\DataManager.cs" />
     <Compile Include="Assets\Script\DEV_NavButtons.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Loader.cs" />
