@@ -1,21 +1,24 @@
 ﻿using UnityEngine;
 
-public class Loader : MonoBehaviour
+namespace ColdPants.ProjectSeedling
 {
-	public GameObject gameManager;
-	public GameObject dataManager;
-
-	void Awake()
+	public class Loader : MonoBehaviour
 	{
-		if (GameManager.instance == null)
+		public GameObject gameManager;
+		public GameObject dataManager;
+
+		void Awake()
 		{
-			Instantiate(gameManager);
+			if (GameManager.instance == null)
+			{
+				Instantiate(gameManager);
+			}
+
+			if (DataManager.instance == null)
+			{
+				Instantiate(dataManager);
+			}
 		}
 
-		if (DataManager.instance == null)
-		{
-			Instantiate(dataManager);
-		}
 	}
-
 }

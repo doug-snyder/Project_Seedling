@@ -1,31 +1,31 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
-/**
- * Handles the retrieval of values from PlayerPrefs that are meant for display
- * as text and saves changed values back to PlayerPrefs when applicable.
- */
-public class UpdateableHandler : MonoBehaviour
+namespace ColdPants.ProjectSeedling
 {
-	private UpdateableText[] updateableTexts;
-
-	#region Main
-	private void Start()
+	/**
+	 * Handles the retrieval of values from PlayerPrefs that are meant for display
+	 * as text and saves changed values back to PlayerPrefs when applicable.
+	 */
+	public class UpdateableHandler : MonoBehaviour
 	{
-		updateableTexts = GetComponentsInChildren<UpdateableText>();
-	}
-	#endregion
+		private UpdateableText[] updateableTexts;
 
-	#region Helpers
-	public void TriggerUpdateables()
-	{
-		foreach (UpdateableText updateableText in updateableTexts)
+		#region Main
+		private void Start()
 		{
-			updateableText.GetPlayerPref();
+			updateableTexts = GetComponentsInChildren<UpdateableText>();
 		}
+		#endregion
 
-		//PlayerPrefs.Save();
+		#region Helpers
+		public void TriggerUpdateables()
+		{
+			foreach (UpdateableText updateableText in updateableTexts)
+			{
+				updateableText.GetDataByFieldName();
+			}
+		}
+		#endregion
 	}
-	#endregion
-
 }
+

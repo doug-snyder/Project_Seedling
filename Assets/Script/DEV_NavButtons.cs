@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DEV_NavButtons : MonoBehaviour
+namespace ColdPants.ProjectSeedling
 {
-	public void DEV_GoToTitlePage()
+	public class DEV_NavButtons : MonoBehaviour
 	{
-		SceneManager.LoadScene("Title");
-	}
+		public void DEV_GoToTitlePage()
+		{
+			SceneManager.LoadScene("Title");
+		}
 
+	}
 }

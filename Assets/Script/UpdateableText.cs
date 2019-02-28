@@ -1,27 +1,28 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class UpdateableText : MonoBehaviour
+namespace ColdPants.ProjectSeedling
 {
-
-	[SerializeField]
-	public string FieldName;
-
-	private Text fieldText;
-
-	#region Main
-	void Start()
-    {
-		fieldText = gameObject.GetComponent<Text>();
-		GetPlayerPref();
-    }
-	#endregion
-	
-	#region Helpers
-	public void GetPlayerPref()
+	public class UpdateableText : MonoBehaviour
 	{
-		fieldText.text = PlayerPrefs.GetString(FieldName);
-	}
-	#endregion
+		public string FieldName;
 
+		private Text fieldText;
+
+		#region Main
+		void Start()
+		{
+			fieldText = gameObject.GetComponent<Text>();
+			GetDataByFieldName();
+		}
+		#endregion
+
+		#region Helpers
+		public void GetDataByFieldName()
+		{
+			fieldText.text = DataManager.instance.GetDataAsString(FieldName);
+		}
+		#endregion
+
+	}
 }

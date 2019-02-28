@@ -1,31 +1,34 @@
 ﻿using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace ColdPants.ProjectSeedling
 {
-	public static GameManager instance = null;
-
-	#region Main
-	private void Awake()
+	public class GameManager : MonoBehaviour
 	{
-		if (instance == null)
+		public static GameManager instance = null;
+
+		#region Main
+		private void Awake()
 		{
-			instance = this;
+			if (instance == null)
+			{
+				instance = this;
+			}
+			else if (instance != this)
+			{
+				Destroy(gameObject);
+			}
+			DontDestroyOnLoad(gameObject);
+
+			StartGame();
 		}
-		else if (instance != this)
+		#endregion
+
+		#region Helpers
+		private void StartGame()
 		{
-			Destroy(gameObject);
+			Debug.Log("StartGame");
 		}
-		DontDestroyOnLoad(gameObject);
+		#endregion
 
-		StartGame();
 	}
-	#endregion
-
-	#region Helpers
-	private void StartGame()
-	{
-		Debug.Log("StartGame");
-	}
-	#endregion
-
 }

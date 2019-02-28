@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b7604bb64ef1845be3887b17d9cdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultScreen: {fileID: 1425741607}
+  DefaultScreen: {fileID: 169596648}
   OnScreenSwitch:
     m_PersistentCalls:
       m_Calls: []
@@ -3314,7 +3314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1205788064
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3725,8 +3725,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 600, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 550, y: 0}
+  m_SizeDelta: {x: 260, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304883904
 MonoBehaviour:
@@ -3737,9 +3737,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1304883902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da285bc3744ace348b8c0c7da54206fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0554aa6b01033e841ba1d20d0de5fecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FieldName: TaxRate
 --- !u!114 &1304883905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3908,7 +3909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1425741604
 RectTransform:
   m_ObjectHideFlags: 0
