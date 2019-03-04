@@ -6,41 +6,29 @@ namespace ColdPants.ProjectSeedling
 	{
 		public static DataManager instance = null;
 
-		private float gdp; //TODO: calcs for determining GDP
 		private float taxRate;
 		private float income;
-		private float expenses;
 
 		public string NationName = "Principality of Fuck";
-		
-		public float GDP
-		{
-			get { return gdp; }
-			private set { gdp = value; }
-		}
+		public float Expenses { get; private set; }
+		//TODO: calcs for determining GDP
+		public float GDP { get; private set; }
 
 		public float TaxRate
 		{
 			get { return taxRate; }
-			private set { taxRate = (value / 100f); }
+			private set { taxRate = value / 100f; }
 		}
 
 		public float Income
 		{
-			get { return gdp * taxRate; }
+			get { return GDP * taxRate; }
 			private set { income = value; }
-		}
-
-		public float Expenses
-		{
-			get { return expenses; }
-			//TODO: calcs for determining Expenses here
-			private set { expenses = value; }
-		}
+		} 
 
 		public float Revenue
 		{
-			get { return income - expenses; }
+			get { return Income - Expenses; }
 		}
 
 
