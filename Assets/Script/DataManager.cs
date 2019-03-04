@@ -6,11 +6,42 @@ namespace ColdPants.ProjectSeedling
 	{
 		public static DataManager instance = null;
 
+		private float gdp; //TODO: calcs for determining GDP
+		private float taxRate;
+		private float income;
+		private float expenses;
+
 		public string NationName = "Principality of Fuck";
-		public float Expenses = 460000f;
-		public float Income = 1000000f;
-		public float Revenue;
-		public float TaxRate = 50f;
+		
+		public float GDP
+		{
+			get { return gdp; }
+			private set { gdp = value; }
+		}
+
+		public float TaxRate
+		{
+			get { return taxRate; }
+			private set { taxRate = (value / 100f); }
+		}
+
+		public float Income
+		{
+			get { return gdp * taxRate; }
+			private set { income = value; }
+		}
+
+		public float Expenses
+		{
+			get { return expenses; }
+			//TODO: calcs for determining Expenses here
+			private set { expenses = value; }
+		}
+
+		public float Revenue
+		{
+			get { return income - expenses; }
+		}
 
 
 		#region Main
@@ -37,21 +68,21 @@ namespace ColdPants.ProjectSeedling
 			{
 				return NationName;
 			}
-			else if (s.Equals("Expenses"))
+			else if (s.Equals("TaxRate"))
 			{
-				return Expenses.ToString();
+				return (TaxRate * 100f).ToString();
 			}
 			else if (s.Equals("Income"))
 			{
 				return Income.ToString();
 			}
+			else if (s.Equals("Expenses"))
+			{
+				return Expenses.ToString();
+			}
 			else if (s.Equals("Revenue"))
 			{
 				return Revenue.ToString();
-			}
-			else if (s.Equals("TaxRate"))
-			{
-				return TaxRate.ToString();
 			}
 
 			return "";
@@ -59,7 +90,9 @@ namespace ColdPants.ProjectSeedling
 
 		private void InitializeData()
 		{
-			Revenue = Income - Expenses;
+			GDP = 2000000f;
+			TaxRate = 50f;
+			Expenses = 500000f;
 		}
 		#endregion
 
