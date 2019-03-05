@@ -6,31 +6,12 @@ namespace ColdPants.ProjectSeedling
 	{
 		public static DataManager instance = null;
 
-		private float taxRate;
-		private float income;
-
 		public string NationName = "Principality of Fuck";
-		public float Expenses { get; private set; }
-		//TODO: calcs for determining GDP
-		public float GDP { get; private set; }
-
-		public float TaxRate
-		{
-			get { return taxRate; }
-			private set { taxRate = value / 100f; }
-		}
-
-		public float Income
-		{
-			get { return GDP * taxRate; }
-			private set { income = value; }
-		} 
-
-		public float Revenue
-		{
-			get { return Income - Expenses; }
-		}
-
+		public float GDP; // TODO: calcs for determining GDP
+		public float TaxRate;
+		public float Income;
+		public float Expenses;
+		public float Revenue;
 
 		#region Main
 		void Awake()
@@ -56,13 +37,17 @@ namespace ColdPants.ProjectSeedling
 			{
 				return NationName;
 			}
+			else if (s.Equals("GDP"))
+			{
+				return GDP.ToString();
+			}
 			else if (s.Equals("TaxRate"))
 			{
-				return (TaxRate * 100f).ToString();
+				return TaxRate.ToString();
 			}
 			else if (s.Equals("Income"))
 			{
-				return Income.ToString();
+				return (GDP * (TaxRate / 100)).ToString();
 			}
 			else if (s.Equals("Expenses"))
 			{
@@ -70,10 +55,10 @@ namespace ColdPants.ProjectSeedling
 			}
 			else if (s.Equals("Revenue"))
 			{
-				return Revenue.ToString();
+				return (Income - Expenses).ToString();
 			}
 
-			return "";
+			return "MISSING FIELD";
 		}
 
 		private void InitializeData()

@@ -10,18 +10,24 @@ namespace ColdPants.ProjectSeedling
 		private Text fieldText;
 
 		#region Main
-		void Start()
+		void Awake()
 		{
 			fieldText = gameObject.GetComponent<Text>();
-			GetDataByFieldName();
 		}
 		#endregion
 
 		#region Helpers
+		public void RefreshField(string newValue)
+		{
+			fieldText.text = newValue;
+		}
+
+		/*
 		public void GetDataByFieldName()
 		{
 			fieldText.text = DataManager.instance.GetDataAsString(FieldName);
 		}
+		*/
 		#endregion
 
 	}
