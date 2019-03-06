@@ -18,7 +18,7 @@ namespace ColdPants.ProjectSeedling
 		#endregion
 
 		#region Helpers
-		public void TriggerUpdateables()
+		public void RefreshAll()
 		{
 			foreach (UpdateableText updateableText in updateableTexts)
 			{

@@ -11,7 +11,8 @@ namespace ColdPants.ProjectSeedling
 		public float TaxRate;
 		public float Income;
 		public float Expenses;
-		public float Revenue;
+
+		public float Revenue { get { return Income - Expenses; }}
 
 		#region Main
 		void Awake()
