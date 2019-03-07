@@ -2,10 +2,6 @@
 
 namespace ColdPants.ProjectSeedling
 {
-	/**
-	 * Handles the retrieval of values from PlayerPrefs that are meant for display
-	 * as text and saves changed values back to PlayerPrefs when applicable.
-	 */
 	public class UpdateableHandler : MonoBehaviour
 	{
 		private UpdateableText[] updateableTexts;
@@ -22,10 +18,11 @@ namespace ColdPants.ProjectSeedling
 		{
 			foreach (UpdateableText updateableText in updateableTexts)
 			{
-				updateableText.GetDataByFieldName();
+
 			}
 		}
 		#endregion
+
 	}
 }
 

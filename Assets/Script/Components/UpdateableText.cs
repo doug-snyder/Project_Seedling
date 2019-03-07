@@ -10,7 +10,7 @@ namespace ColdPants.ProjectSeedling
 		private Text fieldText;
 
 		#region Main
-		void Start()
+		private void Start()
 		{
 			fieldText = gameObject.GetComponent<Text>();
 		}

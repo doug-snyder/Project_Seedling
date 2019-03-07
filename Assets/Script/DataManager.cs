@@ -6,16 +6,26 @@ namespace ColdPants.ProjectSeedling
 	{
 		public static DataManager instance = null;
 
-		public string NationName = "Principality of Fuck";
-		public float GDP; // TODO: calcs for determining GDP
-		public float TaxRate;
-		public float Income;
-		public float Expenses;
+		#region PrimaryValues
+		/*
+		 * TODO:
+		 * calcs for determining GDP (DependentValue?)
+		 * calcs for determining Expenses (DependentValue?)
+		 */
+		public string NationName { get; private set; }
+		public float GDP { get; private set; }
+		public float TaxRate { get; private set; }
+		public float Expenses { get; private set; }
+		#endregion
 
-		public float Revenue { get { return Income - Expenses; }}
+		#region DependentValues
+		public float Income { get { return GDP * TaxRate; } }
+		public float Revenue { get { return Income - Expenses; } }
+		#endregion
+
 
 		#region Main
-		void Awake()
+		private void Awake()
 		{
 			if (instance == null)
 			{
@@ -31,39 +41,12 @@ namespace ColdPants.ProjectSeedling
 		}
 		#endregion
 
+
 		#region Helpers
-		public string GetDataAsString(string s)
-		{
-			if (s.Equals("NationName"))
-			{
-				return NationName;
-			}
-			else if (s.Equals("GDP"))
-			{
-				return GDP.ToString();
-			}
-			else if (s.Equals("TaxRate"))
-			{
-				return TaxRate.ToString();
-			}
-			else if (s.Equals("Income"))
-			{
-				return (GDP * (TaxRate / 100)).ToString();
-			}
-			else if (s.Equals("Expenses"))
-			{
-				return Expenses.ToString();
-			}
-			else if (s.Equals("Revenue"))
-			{
-				return (Income - Expenses).ToString();
-			}
-
-			return "MISSING FIELD";
-		}
-
+		/* Temporary function */
 		private void InitializeData()
 		{
+			NationName = "Principality of Fuck";
 			GDP = 2000000f;
 			TaxRate = 50f;
 			Expenses = 500000f;
