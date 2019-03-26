@@ -2,6 +2,8 @@
 
 namespace ColdPants.ProjectSeedling
 {
+	/* This could be a system, perhaps. */
+
 	public class UpdateableHandler : MonoBehaviour
 	{
 		private UpdateableText[] updateableTexts;

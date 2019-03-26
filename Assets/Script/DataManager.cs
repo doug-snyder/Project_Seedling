@@ -2,6 +2,8 @@
 
 namespace ColdPants.ProjectSeedling
 {
+	/* And this would be a system? */
+
 	public class DataManager : MonoBehaviour
 	{
 		public static DataManager instance = null;
