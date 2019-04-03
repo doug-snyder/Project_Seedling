@@ -1,13 +1,22 @@
-﻿using UnityEngine;
+﻿using System.ComponentModel;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace ColdPants.ProjectSeedling
 {
-	/* This will be a component, I guess. */
-
-	public class UpdateableText : MonoBehaviour
+	public class UpdateableText : MonoBehaviour, INotifyPropertyChanged
 	{
-		public string FieldName;
+
+		private string _FieldName;
+		public string FieldName
+		{
+			get { return _FieldName; }
+			private set
+			{
+				_FieldName = value;
+	
+			}
+		}
 
 		private Text fieldText;
 
@@ -17,6 +26,17 @@ namespace ColdPants.ProjectSeedling
 			fieldText = gameObject.GetComponent<Text>();
 		}
 		#endregion
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		protected virtual void OnPropertyChanged(string propertyName)
+		{
+			PropertyChangedEventHandler handler = PropertyChanged;
+			if (handler != null)
+			{
+				handler(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
 
 	}
 }
