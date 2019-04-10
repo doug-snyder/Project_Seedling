@@ -68,6 +68,7 @@
     <Compile Include="Assets\Script\DEV_NavButtons.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Loader.cs" />
+    <Compile Include="Assets\Script\PageHandlers\FinanceHandler.cs" />
     <Compile Include="Assets\Script\TextUpdater.cs" />
     <Compile Include="Assets\Script\UpdateableHandler.cs" />
     <Compile Include="Assets\Script\UpdateableText.cs" />
