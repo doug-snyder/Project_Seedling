@@ -2,6 +2,7 @@
 
 public class FinanceHandler : MonoBehaviour
 {
+	
 
     void Start()
     {
